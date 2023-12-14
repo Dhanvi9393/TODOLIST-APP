@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="bold"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D38FE3"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="285dp"
+        android:layout_height="74dp"
+        android:text="TO DO LIST APP"
+        android:textStyle="bold"
+        android:textSize="29sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.873"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="366dp"
+        android:layout_height="71dp"
+        android:ems="10"
+        android:hint="Enter Your Task"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.868"
+        tools:layout_editor_absoluteX="16dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Task"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="#8961E4"
+        android:backgroundTintMode="screen"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="550dp"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="382dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="396dp"
+            android:layout_height="430dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
